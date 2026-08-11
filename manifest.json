@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "dev.deoxizn.keybind-manager",
+  "name": "Keybind Manager",
+  "version": "1.0.0",
+  "author": "Deoxizn",
+  "license": "MIT",
+  "description": "Add, override, and disable Hyprland keybindings from the bar, with a rolling backup and one-click revert.",
+  "kinds": ["service", "bar-widget"],
+  "keepLoaded": true,
+  "entryPoints": {
+    "barWidget": "qml/BarWidget.qml",
+    "service": "qml/Service.qml"
+  },
+  "barWidget": {
+    "displayName": "Keybind manager",
+    "description": "Custom keybindings panel with backup and revert",
+    "category": "System",
+    "defaultSection": "left",
+    "allowMultiple": false
+  }
+}

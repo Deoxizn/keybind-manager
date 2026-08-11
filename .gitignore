@@ -1,0 +1,12 @@
+# Python / runtime artifacts
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
