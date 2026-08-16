@@ -24,13 +24,31 @@ survives config updates and shows up in the Omarchy keybindings menu.
 ## Installation
 
 ```sh
-omarchy plugin add --source git "https://github.com/deoxizn/keybind-manager"
-omarchy plugin enable dev.deoxizn.keybind-manager
+omarchy plugin add https://github.com/deoxizn/keybind-manager.git --enable
 ```
 
-Then add the widget to a bar via **Omarchy → Bar & widgets** (category
-*System*, name *Keybind Manager*). The plugin also registers a service, so the
-panel stays in sync across every instance.
+`omarchy plugin add` clones the repo, validates it, and enables the widget in
+the left section of the bar (the manifest's default; it asks for a section
+when run interactively).
+
+### Updating
+
+```sh
+omarchy plugin update dev.deoxizn.keybind-manager
+```
+
+`omarchy plugin update` fetches the latest version, shows the diff, and asks
+before applying it. Run it without an id to update every installed
+git-managed plugin.
+
+### Uninstall
+
+```sh
+omarchy plugin remove dev.deoxizn.keybind-manager
+```
+
+The plugin also registers a service, so the panel stays in sync across every
+instance.
 
 ## Usage
 
